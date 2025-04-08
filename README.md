@@ -1,4 +1,4 @@
-# VPN GPT | 4月5日19M/S|免费SSR/Clash/V2ray/Shadowrocket订阅节点  更新时间 2025-04-05 11:50:48
+# VPN GPT | 4月8日18.8M/S|免费Clash/Shadowrocket/SSR/V2ray订阅节点  更新时间 2025-04-08 10:48:24
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://vpngpt.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://vpngpt.github.io/uploads/2025/04/0-20250405.yaml
-- https://vpngpt.github.io/uploads/2025/04/1-20250405.yaml
-- https://vpngpt.github.io/uploads/2025/04/2-20250405.yaml
-- https://vpngpt.github.io/uploads/2025/04/3-20250405.yaml
-- https://vpngpt.github.io/uploads/2025/04/4-20250405.yaml
+- https://vpngpt.github.io/uploads/2025/04/0-20250408.yaml
+- https://vpngpt.github.io/uploads/2025/04/1-20250408.yaml
+- https://vpngpt.github.io/uploads/2025/04/2-20250408.yaml
+- https://vpngpt.github.io/uploads/2025/04/3-20250408.yaml
+- https://vpngpt.github.io/uploads/2025/04/4-20250408.yaml
 
 ### V2ray订阅链接
 
-- https://vpngpt.github.io/uploads/2025/04/0-20250405.txt
-- https://vpngpt.github.io/uploads/2025/04/1-20250405.txt
-- https://vpngpt.github.io/uploads/2025/04/2-20250405.txt
-- https://vpngpt.github.io/uploads/2025/04/3-20250405.txt
-- https://vpngpt.github.io/uploads/2025/04/4-20250405.txt
+- https://vpngpt.github.io/uploads/2025/04/0-20250408.txt
+- https://vpngpt.github.io/uploads/2025/04/1-20250408.txt
+- https://vpngpt.github.io/uploads/2025/04/2-20250408.txt
+- https://vpngpt.github.io/uploads/2025/04/3-20250408.txt
+- https://vpngpt.github.io/uploads/2025/04/4-20250408.txt
 
 ### Sing-box订阅链接
 
-- https://vpngpt.github.io/uploads/2025/04/20250405.json
+- https://vpngpt.github.io/uploads/2025/04/20250408.json
 
 ## 更多clash节点订阅 ：
 
