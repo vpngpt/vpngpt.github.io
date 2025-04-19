@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpngpt.github.io/news/article-99670.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>vue 实现高德坐标转GPS坐标</title>
+        <meta name="description" content="首先介绍一下常见的几种地图的坐标类型：  WGS-84：这是一个国际标准，也就是GPS坐标（Google Earth、或者GPS模块采集的都是这个类型）。 GCJ-02：中国坐标偏移标准，像是Goog" />
+        <link rel="icon" href="/assets/website/img/clashxw/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN GPT 节点订阅中文官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpngpt.github.io/news/article-99670.htm" />
+    <meta property="og:site_name" content="VPN GPT 节点订阅中文官网" />
+    <meta property="og:title" content="vue 实现高德坐标转GPS坐标" />
+    <meta property="og:image" content="https://vpngpt.github.io/uploads/20241223/d798eed131f30cd11bc63de42929e690.webp" />
+        <meta property="og:release_date" content="2025-04-19T08:59:08" />
+    <meta property="og:updated_time" content="2025-04-19T08:59:08" />
+        <meta property="og:description" content="首先介绍一下常见的几种地图的坐标类型：  WGS-84：这是一个国际标准，也就是GPS坐标（Google Earth、或者GPS模块采集的都是这个类型）。 GCJ-02：中国坐标偏移标准，像是Goog" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue 实现高德坐标转GPS坐标">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- all css here -->
+    <link rel="stylesheet" href="/assets/website/css/clashxw/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxw/icons.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxw/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxw/style.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxw/responsive.css">
+    <script src="/assets/website/js/frontend/clashxw/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EY7YM3VK3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EY7YM3VK3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- header start -->
+    <header class="header-area transparent-bar header-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-5 col-sm-4">
+                    <div class="logo">
+                        <a href="/">
+                                                        <span>VPN GPT</span>
+                                                    </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-7 col-sm-8">
+                    <div class="menu-search-bundle">
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu-area d-md-block d-block col-md-12 col-lg-12 col-12 d-lg-none d-xl-none">
+                    <div class="mobile-menu">
+                        <nav id="mobile-menu-active">
+                            <ul class="menu-overflow">
+                                                                <li><a href="/">首页</a></li>
+                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                <li><a href="#">关于</a></li>
+                                <li><a href="#">联系</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="breadcrumb-area bg-img ptb-80" style="background-image:url(/assets/website/img/clashxw/banner/breath.jpg);">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h1>vue 实现高德坐标转GPS坐标</h1>
+                <ul>
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                    <li>
+                        <a href="/news/">新闻资讯</a>
+                    </li>
+                    <li class="active">正文</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="about-area ptb-95">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				</h1> <p>首先介绍一下常见的几种地图的坐标类型：</p> <ol> <li><strong>WGS-84</strong>：这是一个国际标准，也就是GPS坐标（Google Earth、或者GPS模块采集的都是这个类型）。</li> <li><strong>GCJ-02</strong>：中国坐标偏移标准，像是Google Map、高德、腾讯地图都是采用这种坐标展示。</li> <li><strong>BD-09</strong>：百度坐标偏移标准，百度地图专用的便宜标准。</li> </ol> <p>所以说这篇博文主要是实现GCJ-02坐标转换成WGS-84坐标。</p> <p>什么时候会用到需要解决坐标转换的问题呢？起因是一个demo，它使用GPS模块采集经纬度数据，然后使用高德地图进行转换，是的，高德地图官方提供了API，实现了GPS坐标转换到高德坐标进行展示，也就是WGS-84转GCJ-02高德官方已经支持了，看下面。</p> <p>高德坐标转换地址（<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://lbs.amap.com/demo/list/jsapi-v2"  target="_blank" rel="nofollow">点这里</a>）<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/bd6a077ad2e88dbd7ee0d827f7b6c22d.jpg" alt="vue 实现高德坐标转GPS坐标"><br /> 通过高德官方提供的两个案例可以实现GPS坐标转换/批量转换成高德坐标展示，但是这种API接口是有访问次数限制的，当日访问次数超限额，是会被禁止访问转换的，所以说如果转换的坐标过多，尽量使用批量，不要一个一个的转换浪费次数。</p> <p>但是比如说这样一个功能，我需要根据当前地图可视化范围，获取当前可视化范围的点，这样可能会出现问题，因为查询的点是GPS坐标，但是传给后台的可视化范围是高德坐标，两个坐标不统一，就会出现坐标偏差，效果就不是特别的好。</p> <p>因此，就需要将可视化范围的东北角坐标和西南角坐标转换成GPS坐标在传给后台过滤，这样的话，可以将误差缩到最小。</p> <p>这种转换的代码在网上很多，各式各样的都存在，但是有的效果不是特别的好，然后我找了一个测试了一下，感觉效果还是可以的，起码我能接受，需要的话看一下最后的效果图，如果接受的话，可以用起来。</p> <p>首先有一个封装好的js文件，里面的代码就是下面的代码。</p> <pre><code class="language-javascript"> /**  * 高德地图坐标转GPS坐标算法  */  //定义一些常量 const PI = 3.1415926535897932384626; const a = 6378245.0;  //长半轴 const ee = 0.00669342162296594323; //扁率  /**  * GCJ02 转换为 WGS84  * @param lng  * @param lat  * @returns {*[]}  */ function gcj02towgs84(lng, lat) {   lat = +lat   lng = +lng   if (out_of_china(lng, lat)) {     return [lng, lat]   } else {     let dlat = transformlat(lng - 105.0, lat - 35.0)     let dlng = transformlng(lng - 105.0, lat - 35.0)     let radlat = lat / 180.0 * PI     let magic = Math.sin(radlat)     magic = 1 - ee * magic * magic     let sqrtmagic = Math.sqrt(magic)     dlat = (dlat * 180.0) / ((a * (1 - ee)) / (magic * sqrtmagic) * PI)     dlng = (dlng * 180.0) / (a / sqrtmagic * Math.cos(radlat) * PI)     let mglat = lat + dlat     let mglng = lng + dlng     return [lng * 2 - mglng, lat * 2 - mglat]   } }  /**  * WGS84 转换为 GCJ02  * @param lng  * @param lat  * @returns {*[]}  */ function wgs84togcj02(lng, lat) {   lat = +lat   lng = +lng   if (out_of_china(lng, lat)) {     return [lng, lat]   } else {     let dlat = transformlat(lng - 105.0, lat - 35.0)     let dlng = transformlng(lng - 105.0, lat - 35.0)     let radlat = lat / 180.0 * PI     let magic = Math.sin(radlat)     magic = 1 - ee * magic * magic     let sqrtmagic = Math.sqrt(magic)     dlat = (dlat * 180.0) / ((a * (1 - ee)) / (magic * sqrtmagic) * PI)     dlng = (dlng * 180.0) / (a / sqrtmagic * Math.cos(radlat) * PI)     return [lng + dlng, lat + dlat]   } }  /**  * 判断是否在国内，不在国内则不做偏移  * @param lng  * @param lat  * @returns {boolean}  */ function out_of_china(lng, lat) {   lat = +lat   lng = +lng   // 纬度3.86~53.55,经度73.66~135.05   return !(lng &gt; 73.66 &amp;&amp; lng &lt; 135.05 &amp;&amp; lat &gt; 3.86 &amp;&amp; lat &lt; 53.55) }  function transformlat(lng, lat) {   lat = +lat   lng = +lng   let ret = -100.0 + 2.0 * lng + 3.0 * lat + 0.2 * lat * lat + 0.1 * lng * lat + 0.2 * Math.sqrt(Math.abs(lng))   ret += (20.0 * Math.sin(6.0 * lng * PI) + 20.0 * Math.sin(2.0 * lng * PI)) * 2.0 / 3.0   ret += (20.0 * Math.sin(lat * PI) + 40.0 * Math.sin(lat / 3.0 * PI)) * 2.0 / 3.0   ret += (160.0 * Math.sin(lat / 12.0 * PI) + 320 * Math.sin(lat * PI / 30.0)) * 2.0 / 3.0   return ret }  function transformlng(lng, lat) {   lat = +lat   lng = +lng   let ret = 300.0 + lng + 2.0 * lat + 0.1 * lng * lng + 0.1 * lng * lat + 0.1 * Math.sqrt(Math.abs(lng))   ret += (20.0 * Math.sin(6.0 * lng * PI) + 20.0 * Math.sin(2.0 * lng * PI)) * 2.0 / 3.0   ret += (20.0 * Math.sin(lng * PI) + 40.0 * Math.sin(lng / 3.0 * PI)) * 2.0 / 3.0   ret += (150.0 * Math.sin(lng / 12.0 * PI) + 300.0 * Math.sin(lng / 30.0 * PI)) * 2.0 / 3.0   return ret }  export {   gcj02towgs84 }</code></pre> <p>就这些，然后用法大概都知道，就不详细说了。</p> <p>我特意转换试了一下误差，我先找了一个原始的高德坐标，然后把这个高德坐标通过上面的代码转成GPS的坐标，然后又把转成的GPS坐标再使用高德官方提供的方法转回高德坐标，我感觉前后两个高德坐标是差不多的，起码误差我能接受。</p> <p>下面是来回转换的效果图。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/d368f4ed9a3472b7cc43be6c60bbcbd0.jpg" alt="vue 实现高德坐标转GPS坐标"><br /> 然后封装的方法有 WGS84 转 GCJ02 的，也有 GCJ02 转 WGS84的，需要啥自己用。可以不用高德的，毕竟访问次数有限制，而且批量转化的坐标点多了还会出问题，毕竟是get请求嘛，加油！</p> <p>完成~</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-98839.htm">农大宠物医院价格表（农大宠物医院价格表大全）</a></p>
+                                        <p>下一个：<a href="/news/article-99671.htm">动物医院牌子设计理念（动物医院招牌图片）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-96013.htm" title="青浦二中高考成绩（青浦二中2021高考成绩）">青浦二中高考成绩（青浦二中2021高考成绩）</a></li>
+                        <li class="py-2"><a href="/news/article-94538.htm" title="三国杀皮肤武将什么意思（三国杀里的皮肤有什么用）">三国杀皮肤武将什么意思（三国杀里的皮肤有什么用）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-11-free-node-subscribe.htm" title="VPN GPT | 4月11日21.4M/S|免费SSR/Clash/V2ray/Shadowrocket订阅节点">VPN GPT | 4月11日21.4M/S|免费SSR/Clash/V2ray/Shadowrocket订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-91194.htm" title="动物疫苗生产车间 动物疫苗生产车间工作怎么样">动物疫苗生产车间 动物疫苗生产车间工作怎么样</a></li>
+                        <li class="py-2"><a href="/news/article-92281.htm" title="三国杀武将皮肤有什么用啊（三国杀武将皮肤有什么用啊知乎）">三国杀武将皮肤有什么用啊（三国杀武将皮肤有什么用啊知乎）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-7-free-v2ray-subscribe.htm" title="VPN GPT | 4月7日22.2M/S|免费V2ray/Clash/Shadowrocket/SSR订阅节点">VPN GPT | 4月7日22.2M/S|免费V2ray/Clash/Shadowrocket/SSR订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-92280.htm" title="宠物粮食加工厂加盟费多少钱一个月 宠物粮食加工厂加盟费多少钱一个月啊">宠物粮食加工厂加盟费多少钱一个月 宠物粮食加工厂加盟费多少钱一个月啊</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-10-clash-v2ray-ss-ssr.htm" title="VPN GPT | 4月10日20.2M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点">VPN GPT | 4月10日20.2M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-97390.htm" title="狗狗领养是什么意思（狗狗领养是真的吗）">狗狗领养是什么意思（狗狗领养是真的吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-node-share-links.htm" title="VPN GPT | 4月13日21.6M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点">VPN GPT | 4月13日21.6M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">45</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <footer class="footer-area">
+        <div class="footer-bottom black-bg-2 pb-25 pt-25">
+            <div class="container">
+                <div class="copyright text-center">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN GPT 节点订阅中文官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- all js here -->
+    <script src="/assets/website/js/frontend/clashxw/vendor/jquery-1.12.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxw/popper.js"></script>
+    <script src="/assets/website/js/frontend/clashxw/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxw/ajax-mail.js"></script>
+    <script src="/assets/website/js/frontend/clashxw/plugins.js"></script>
+    <script src="/assets/website/js/frontend/clashxw/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
