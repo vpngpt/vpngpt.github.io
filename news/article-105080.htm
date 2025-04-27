@@ -1,0 +1,206 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpngpt.github.io/news/article-105080.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Java 的程序逻辑控制</title>
+        <meta name="description" content="在程序开发的过程之中一共会存在三种程序逻辑：顺序结构、分支结构、循环结构，对于之前所编写的代码大部分都是顺序结构的定义，即：所有的程序将按照定义的代码顺序依次执行。  if 分支结构主要是针对于关系表" />
+        <link rel="icon" href="/assets/website/img/clashxw/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="VPN GPT 节点订阅中文官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpngpt.github.io/news/article-105080.htm" />
+    <meta property="og:site_name" content="VPN GPT 节点订阅中文官网" />
+    <meta property="og:title" content="Java 的程序逻辑控制" />
+    <meta property="og:image" content="https://vpngpt.github.io/uploads/20241223/b5e0dc2a381ba2dcd27debb26971f53e.webp" />
+        <meta property="og:release_date" content="2025-04-26T07:41:11" />
+    <meta property="og:updated_time" content="2025-04-26T07:41:11" />
+        <meta property="og:description" content="在程序开发的过程之中一共会存在三种程序逻辑：顺序结构、分支结构、循环结构，对于之前所编写的代码大部分都是顺序结构的定义，即：所有的程序将按照定义的代码顺序依次执行。  if 分支结构主要是针对于关系表" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Java 的程序逻辑控制">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- all css here -->
+    <link rel="stylesheet" href="/assets/website/css/clashxw/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxw/icons.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxw/plugins.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxw/style.css">
+    <link rel="stylesheet" href="/assets/website/css/clashxw/responsive.css">
+    <script src="/assets/website/js/frontend/clashxw/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EY7YM3VK3Y"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EY7YM3VK3Y');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- header start -->
+    <header class="header-area transparent-bar header-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-5 col-sm-4">
+                    <div class="logo">
+                        <a href="/">
+                                                        <span>VPN GPT</span>
+                                                    </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-7 col-sm-8">
+                    <div class="menu-search-bundle">
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-menu-area d-md-block d-block col-md-12 col-lg-12 col-12 d-lg-none d-xl-none">
+                    <div class="mobile-menu">
+                        <nav id="mobile-menu-active">
+                            <ul class="menu-overflow">
+                                                                <li><a href="/">首页</a></li>
+                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                <li><a href="#">关于</a></li>
+                                <li><a href="#">联系</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="breadcrumb-area bg-img ptb-80" style="background-image:url(/assets/website/img/clashxw/banner/breath.jpg);">
+        <div class="container">
+            <div class="breadcrumb-content text-center">
+                <h1>Java 的程序逻辑控制</h1>
+                <ul>
+                    <li>
+                        <a href="/">首页</a>
+                    </li>
+                    <li>
+                        <a href="/news/">新闻资讯</a>
+                    </li>
+                    <li class="active">正文</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="about-area ptb-95">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <p>在程序开发的过程之中一共会存在三种程序逻辑：顺序结构、分支结构、循环结构，对于之前所编写的代码大部分都是顺序结构的定义，即：所有的程序将按照定义的代码顺序依次执行。</p> </h1> <p>if 分支结构主要是针对于关系表达式进行判断处理的分支操作。对于分支语句主要有三类的使用形式，使用的关键字：if、else。</p> </h1> <p>switch 是一个开关语句，它主要是根据内容来进行的判断，需要注意的是 switch 中可以判断的只能够是数据（int、char、枚举、String）,而不能使用逻辑判断。</p> <p>举例：</p> <pre><code class="language-java">&nbsp; public static void main(String[] args) {  &nbsp; &nbsp; &nbsp; &nbsp;int ch=2;  &nbsp; &nbsp; &nbsp; &nbsp;switch (ch){  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;case 2:  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;System.out.println("设置的内容是2。");  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;case 1:{  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;System.out.println("设置的内容是1。");  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;default:{  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;System.out.println("没有内容满足。");  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}  &nbsp; &nbsp; &nbsp; &nbsp;}  &nbsp; &nbsp; }  &nbsp; &nbsp; /**  &nbsp; &nbsp; &nbsp;* 输出结果：  &nbsp; &nbsp; &nbsp;* 设置的内容是2。  &nbsp; &nbsp; &nbsp;* 设置的内容是1。  &nbsp; &nbsp; &nbsp;* 没有内容满足。  &nbsp; &nbsp; &nbsp;*/  &nbsp; &nbsp; }</code></pre> <p>switch 语句进行设计的时候，如果你在每一个 case 后面没有追加 break 语句，那么会在第一个匹配的 case 之后继续执行，一直到全部的 switch 中后续代码执行完毕或者遇见 break。</p> <p>举例：</p> <pre><code class="language-java">&nbsp; &nbsp; public static void main(String[] args) {  &nbsp; &nbsp; &nbsp; &nbsp;int ch=2;  &nbsp; &nbsp; &nbsp; &nbsp;switch (ch){  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;case 2:  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;System.out.println("设置的内容是2。");  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;case 1:{  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;System.out.println("设置的内容是1。");  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;default:{  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;System.out.println("没有内容满足。");  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;break;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}  &nbsp; &nbsp; &nbsp; &nbsp;}  &nbsp; &nbsp; }  &nbsp; &nbsp; /**  &nbsp; &nbsp; &nbsp;* 输出结果：  &nbsp; &nbsp; &nbsp;*设置的内容是2。  &nbsp; &nbsp; &nbsp;*/</code></pre> </h1> <p>所谓的循环结构指的是某一段代码被重复执行的处理操作，在程序之中提供有while 语句来实现循环的定义，该语句有两类使用形式：</p> <p>while 循环：</p> <pre><code class="language-java">&nbsp; &nbsp; public static void main(String[] args) {  &nbsp; &nbsp; &nbsp; &nbsp; int sum = 0;// 保存最终的计算总和  &nbsp; &nbsp; &nbsp; &nbsp; int num = 1;//进行循环控制  &nbsp; &nbsp; &nbsp; &nbsp; while (num &lt;= 100) { //循环的执行条件  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sum += num; //累加  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num++; //修改循环条件  &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(sum);//5050    &nbsp; &nbsp; }</code></pre> <p>do...while 循环：</p> <pre><code class="language-java">&nbsp; &nbsp; public static void main(String[] args) {  &nbsp; &nbsp; &nbsp; &nbsp; int sum = 0;// 保存最终的计算总和  &nbsp; &nbsp; &nbsp; &nbsp; int num = 1;//进行循环控制  &nbsp; &nbsp; &nbsp; &nbsp; do { //循环的执行条件  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sum += num; //累加  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; num++; //修改循环条件  &nbsp; &nbsp; &nbsp; &nbsp; } while (num &lt;= 100);  &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(sum);//5050    &nbsp; &nbsp; }</code></pre> </h1> <p>while 循环是先判断后执行，而 do...while先执行一次后判断。开发中能见到 do...while循环的几率几乎为1%，99%的情况下首选的肯定是 while 循环。</p> </h1> <p>for 循环也是一种常规的使用结构。</p> <p>举例：</p> <pre><code>&nbsp; &nbsp; public static void main(String[] args) {  &nbsp; &nbsp; &nbsp; &nbsp; int sum = 0;// 保存最终的计算总和  &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt;= 100; i++) {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sum += i; //累加  &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; &nbsp; &nbsp; System.out.println(sum);//5050  &nbsp; &nbsp; }</code></pre> <p>对于 while 和 for 循环的选择只有一个参考标准：</p> <p>1. 在明确确定循环次数的情况下优先选择 for 循环；</p> <p>2. 在不知道循环次数但是直到循环结束条件的情况下使用 while 循环；</p> </h1> <p>在循环语句定义的时候还有两个控制语句：break、continue</p> <p>1. break 主要的功能是退出整个循环结构</p> <p>举例：</p> <pre><code>&nbsp; &nbsp; public static void main(String[] args) {  &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt;10 ; i++) {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (i==3){  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print(i+" "); //0 1 2  &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; }</code></pre> <p>2. continue 严格来讲只是结束当前的一次调用（结束当前循环）</p> <p>举例：</p> <pre><code>&nbsp; &nbsp; public static void main(String[] args) {  &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt;10 ; i++) {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (i==3){  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print(i+" "); //0 1 2 4 5 6 7 8 9  &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; }</code></pre> <p>当执行到了 continue 的时候就表示当前的语句之后后续代码不再执行，而直接进行后续的判断处理。</p> </h1> <p>在一个循环语句之中嵌套其它的循环语句就称为循环嵌套处理，循环嵌套层次越多时间复杂度就越高，那么下面通过循环的嵌套观察两个简单的程序。</p> <p>举例“：打印乘法口诀表</p> <pre><code> &nbsp; public static void main(String[] args) {  &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 1; i &lt;= 9; i++) {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int j = 1; j &lt; 10; j++) {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (j &gt; i) {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print(j + "*" + i + "=" + (i * j) + " ");  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println();  &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; }</code></pre> <p>举例：打印三角形</p> <pre><code> &nbsp; public static void main(String[] args) {  &nbsp; &nbsp; &nbsp; &nbsp; for (int i = 0; i &lt;= 9; i++) {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0; j &lt; 9 - i; j++) {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print(" ");  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0; j &lt; 2 * i + 1; j++) {  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.print("*");  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; System.out.println();  &nbsp; &nbsp; &nbsp; &nbsp; }  &nbsp; &nbsp; }</code></pre> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-104146.htm">十大狗粮品牌排行榜（排名前十的狗粮品牌）</a></p>
+                                        <p>下一个：<a href="/news/article-105081.htm">上海宠物救助站电话号码是多少（上海宠物救助领养中心地址）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-100440.htm" title="宠物主粮上市公司名单 宠物主粮上市公司名单公布">宠物主粮上市公司名单 宠物主粮上市公司名单公布</a></li>
+                        <li class="py-2"><a href="/news/article-104145.htm" title="5千元小投资加盟店（5千元小投资加盟店福建）">5千元小投资加盟店（5千元小投资加盟店福建）</a></li>
+                        <li class="py-2"><a href="/news/article-101029.htm" title="宠物粮市场分析报告（宠物粮市场分析报告模板）">宠物粮市场分析报告（宠物粮市场分析报告模板）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-7-free-v2ray-subscribe.htm" title="VPN GPT | 4月7日22.2M/S|免费V2ray/Clash/Shadowrocket/SSR订阅节点">VPN GPT | 4月7日22.2M/S|免费V2ray/Clash/Shadowrocket/SSR订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-node-share-links.htm" title="VPN GPT | 4月13日21.6M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点">VPN GPT | 4月13日21.6M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-20-free-v2ray-subscribe.htm" title="VPN GPT | 4月20日18.2M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点">VPN GPT | 4月20日18.2M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-92953.htm" title="java 获取泛型t的class Java泛型 | Jackson TypeReference获取泛型类型信息">java 获取泛型t的class Java泛型 | Jackson TypeReference获取泛型类型信息</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-18-node-share.htm" title="VPN GPT | 4月18日18.9M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点">VPN GPT | 4月18日18.9M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点</a></li>
+                        <li class="py-2"><a href="/news/article-99671.htm" title="动物医院牌子设计理念（动物医院招牌图片）">动物医院牌子设计理念（动物医院招牌图片）</a></li>
+                        <li class="py-2"><a href="/news/article-98228.htm" title="开宠物用品店的优势和劣势（开宠物用品店需要准备什么）">开宠物用品店的优势和劣势（开宠物用品店需要准备什么）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">69</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <footer class="footer-area">
+        <div class="footer-bottom black-bg-2 pb-25 pt-25">
+            <div class="container">
+                <div class="copyright text-center">
+                                        <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                    <p>
+                        <a href="/">VPN GPT 节点订阅中文官网</a> 版权所有 Powered by WordPress
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- all js here -->
+    <script src="/assets/website/js/frontend/clashxw/vendor/jquery-1.12.0.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxw/popper.js"></script>
+    <script src="/assets/website/js/frontend/clashxw/bootstrap.min.js"></script>
+    <script src="/assets/website/js/frontend/clashxw/ajax-mail.js"></script>
+    <script src="/assets/website/js/frontend/clashxw/plugins.js"></script>
+    <script src="/assets/website/js/frontend/clashxw/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
