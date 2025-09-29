@@ -1,4 +1,4 @@
-# VPN GPT | 9月23日19M/S|免费V2ray/SSR/Clash/Shadowrocket订阅节点  更新时间 2025-09-23 10:25:03
+# VPN GPT | 9月29日18.8M/S|免费Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点订阅节点  更新时间 2025-09-29 03:07:09
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://vpngpt.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -7,27 +7,27 @@
 
 ## 订阅链接：
 
-### Clash订阅链接
+### 免费Clash节点订阅链接
 
-- https://vpngpt.github.io/uploads/2025/09/0-20250923.yaml
-- https://vpngpt.github.io/uploads/2025/09/1-20250923.yaml
-- https://vpngpt.github.io/uploads/2025/09/2-20250923.yaml
-- https://vpngpt.github.io/uploads/2025/09/3-20250923.yaml
-- https://vpngpt.github.io/uploads/2025/09/4-20250923.yaml
+- https://vpngpt.github.io/uploads/2025/09/0-20250929.yaml
+- https://vpngpt.github.io/uploads/2025/09/1-20250929.yaml
+- https://vpngpt.github.io/uploads/2025/09/2-20250929.yaml
+- https://vpngpt.github.io/uploads/2025/09/3-20250929.yaml
+- https://vpngpt.github.io/uploads/2025/09/4-20250929.yaml
 
-### V2ray订阅链接
+### 免费V2ray节点订阅链接
 
-- https://vpngpt.github.io/uploads/2025/09/0-20250923.txt
-- https://vpngpt.github.io/uploads/2025/09/1-20250923.txt
-- https://vpngpt.github.io/uploads/2025/09/2-20250923.txt
-- https://vpngpt.github.io/uploads/2025/09/3-20250923.txt
-- https://vpngpt.github.io/uploads/2025/09/4-20250923.txt
+- https://vpngpt.github.io/uploads/2025/09/0-20250929.txt
+- https://vpngpt.github.io/uploads/2025/09/1-20250929.txt
+- https://vpngpt.github.io/uploads/2025/09/2-20250929.txt
+- https://vpngpt.github.io/uploads/2025/09/3-20250929.txt
+- https://vpngpt.github.io/uploads/2025/09/4-20250929.txt
 
-### Sing-box订阅链接
+### 免费Sing-box节点订阅链接
 
-- https://vpngpt.github.io/uploads/2025/09/20250923.json
+- https://vpngpt.github.io/uploads/2025/09/20250929.json
 
-## 更多clash节点订阅 ：
+## 更多Clash节点订阅 ：
 
 
 ### 高速机场推荐1【<a href="https://www.nfsq.us/#/register?code=UTg5SIHV" target="_blank">农夫山泉</a>】
