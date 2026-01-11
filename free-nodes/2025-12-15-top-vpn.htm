@@ -390,29 +390,9 @@ nslookup github.com
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 节点延迟排序功能如何提升访问体验？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 会测速节点延迟和丢包率，并优先使用低延迟节点。结合策略组和分流规则，可保证网页、视频和游戏流量通过最优节点，提高访问速度和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的 outbound freedom 模式有什么作用？</h5></div>
     <div class="panel-body">
         freedom 是直连模块，可用于分流策略中实现部分流量直连。用户可在 routing 中设置匹配规则，将国内域名或局域网 IP 指向 freedom 出口，从而减少代理开销和延迟。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekobox 和 Nekoray 有何关系？</h5></div>
-    <div class="panel-body">
-        Nekobox 是 Nekoray 的移动端衍生版，界面简洁，主要适配 Android 平台。两者使用同样的核心逻辑与配置结构，因此订阅文件和节点信息可以兼容共享。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 的透明代理适合哪些应用场景？</h5></div>
-    <div class="panel-body">
-        透明代理通过 TUN 或 WinDivert 拦截系统 IP 层流量，无需配置每个应用。适合全局科学上网、在线游戏或对局域网设备统一代理的场景。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan TLS 如何避免被 DPI 检测？</h5></div>
-    <div class="panel-body">
-        通过选择真实可访问域名并使用有效证书，Trojan 流量可完全模拟 HTTPS 请求。隐藏真实流量特征，降低被封锁和 DPI 检测风险，保证节点长期可用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 的 Rule Provider 自动更新规则如何操作？</h5></div>
@@ -420,14 +400,29 @@ nslookup github.com
         Rule Provider 可以通过远程 URL 自动下载规则和节点，定期更新无需手动操作。结合策略组使用，可保持节点和分流规则最新，提高访问速度和网络可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 节点延迟排序功能如何使用？</h5></div>
-    <div class="panel-body">
-        Matsuri 定期测速节点延迟，并结合策略组自动选择延迟最低的节点。用户无需手动切换节点，即可保持高速访问，提高网页、视频和游戏体验的稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 如何实现分应用代理？</h5></div>
     <div class="panel-body">
         Clash 可通过策略组和规则文件按应用分流，将特定应用的流量转发到指定节点。例如游戏走低延迟节点，网页浏览走普通节点，实现高效分流和优化网络速度。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekobox 和 Nekoray 有何关系？</h5></div>
+    <div class="panel-body">
+        Nekobox 是 Nekoray 的移动端衍生版，界面简洁，主要适配 Android 平台。两者使用同样的核心逻辑与配置结构，因此订阅文件和节点信息可以兼容共享。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 节点延迟排序功能如何提升访问体验？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 会测速节点延迟和丢包率，并优先使用低延迟节点。结合策略组和分流规则，可保证网页、视频和游戏流量通过最优节点，提高访问速度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan TLS 如何避免被 DPI 检测？</h5></div>
+    <div class="panel-body">
+        通过选择真实可访问域名并使用有效证书，Trojan 流量可完全模拟 HTTPS 请求。隐藏真实流量特征，降低被封锁和 DPI 检测风险，保证节点长期可用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何为 Trojan 配置 ALPN 与 SNI 提升伪装效果？</h5></div>
+    <div class="panel-body">
+        在服务器与客户端配置中设置合适的 SNI（伪装域名）并启用 ALPN（例如 http/1.1），确保 TLS 握手时使用常见的应用层协议标识，从而增加流量与普通 HTTPS 的相似度，降低被检测概率。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 支持节点手动导入和修改吗？</h5></div>
@@ -435,9 +430,14 @@ nslookup github.com
         支持。用户可以手动输入节点信息或通过扫描二维码导入节点，并进行修改或删除。虽然不支持自动订阅更新，但足以满足轻量级用户对节点管理和分流的需求。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何为 Trojan 配置 ALPN 与 SNI 提升伪装效果？</h5></div>
+    <div class="panel-heading"><h5>Netch 的透明代理适合哪些应用场景？</h5></div>
     <div class="panel-body">
-        在服务器与客户端配置中设置合适的 SNI（伪装域名）并启用 ALPN（例如 http/1.1），确保 TLS 握手时使用常见的应用层协议标识，从而增加流量与普通 HTTPS 的相似度，降低被检测概率。    </div>
+        透明代理通过 TUN 或 WinDivert 拦截系统 IP 层流量，无需配置每个应用。适合全局科学上网、在线游戏或对局域网设备统一代理的场景。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 节点延迟排序功能如何使用？</h5></div>
+    <div class="panel-body">
+        Matsuri 定期测速节点延迟，并结合策略组自动选择延迟最低的节点。用户无需手动切换节点，即可保持高速访问，提高网页、视频和游戏体验的稳定性。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -466,16 +466,16 @@ nslookup github.com
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-12-1-top-vpn-node.htm" title="VPN GPT | 12月1日18M/S|免费Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点订阅节点">VPN GPT | 12月1日18M/S|免费Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Clash节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-23-node-share-links.htm" title="VPN GPT | 11月23日22.2M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点订阅节点">VPN GPT | 11月23日22.2M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-3-vpn-node.htm" title="VPN GPT | 12月3日19.8M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点">VPN GPT | 12月3日19.8M/S|免费V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-28-free-vpn.htm" title="VPN GPT | 11月28日22.5M/S|免费Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点订阅节点">VPN GPT | 11月28日22.5M/S|免费Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-17-free-node-subscribe.htm" title="VPN GPT | 12月17日19.7M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点订阅节点">VPN GPT | 12月17日19.7M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Clash节点/Singbox节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-26-free-node-subscribe.htm" title="VPN GPT | 11月26日18.1M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点">VPN GPT | 11月26日18.1M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-8-free-node-subscribe.htm" title="VPN GPT | 11月8日19.6M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点订阅节点">VPN GPT | 11月8日19.6M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-2-free-vpn-node.htm" title="VPN GPT | 12月2日18.9M/S|免费Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点订阅节点">VPN GPT | 12月2日18.9M/S|免费Clash节点/Shadowrocket节点/Singbox节点/SSR节点/V2ray节点订阅节点</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-19-share-vpn.htm" title="VPN GPT | 12月19日21.6M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点">VPN GPT | 12月19日21.6M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-7-free-node-subscribe.htm" title="VPN GPT | 1月7日22.8M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点订阅节点">VPN GPT | 1月7日22.8M/S|免费Shadowrocket节点/Clash节点/V2ray节点/SSR节点/Singbox节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-10-vpn-node.htm" title="VPN GPT | 12月10日20.1M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点订阅节点">VPN GPT | 12月10日20.1M/S|免费V2ray节点/Shadowrocket节点/Clash节点/Singbox节点/SSR节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-24-vpn-github.htm" title="VPN GPT | 12月24日18.9M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点订阅节点">VPN GPT | 12月24日18.9M/S|免费Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点订阅节点</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-12-18-vpn-node.htm" title="VPN GPT | 12月18日22.6M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点订阅节点">VPN GPT | 12月18日22.6M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-21-top-vpn-node.htm" title="VPN GPT | 12月21日20M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点订阅节点">VPN GPT | 12月21日20M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-15-top-vpn.htm" title="VPN GPT | 12月15日20.4M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点订阅节点">VPN GPT | 12月15日20.4M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-1-vpn-proxy.htm" title="VPN GPT | 1月1日21M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点订阅节点">VPN GPT | 1月1日21M/S|免费SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Singbox节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-23-vpn-free.htm" title="VPN GPT | 12月23日21.7M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点订阅节点">VPN GPT | 12月23日21.7M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-22-node-share-links.htm" title="VPN GPT | 12月22日22.2M/S|免费SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点订阅节点">VPN GPT | 12月22日22.2M/S|免费SSR节点/Clash节点/Singbox节点/V2ray节点/Shadowrocket节点订阅节点</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-19-share-vpn.htm" title="VPN GPT | 12月19日21.6M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点">VPN GPT | 12月19日21.6M/S|免费SSR节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点</a></li>
                     </ul>
     </div>
 </div>
@@ -487,10 +487,10 @@ nslookup github.com
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                     </ul>
     </div>
